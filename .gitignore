@@ -30,3 +30,6 @@ data/
 exam-questions/
 exam-questions*.md
 exam-questions*.json
+
+# Local working files, not part of the study material
+videos/

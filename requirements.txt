@@ -1,4 +1,7 @@
 anthropic
 python-dotenv
+mcp
+fastembed
+matplotlib
 notebook
 ipykernel
