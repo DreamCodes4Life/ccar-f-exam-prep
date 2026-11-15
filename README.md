@@ -77,3 +77,5 @@ exam/
 - [`CLAUDE.md`](CLAUDE.md) tells Claude Code how to help in this repo. I use it as a study partner.
 - Notes and code here are my own work. Course material, quiz answers and the exam guide's sample questions are not copied into this repo.
 - API keys stay out of the repo. Code reads `ANTHROPIC_API_KEY` from the environment.
+- Each lesson gets its own branch (e.g. `ClaudeAPI_ToolUse`), which is merged into `main` when the lesson is done. The [branches](https://github.com/DreamCodes4Life/ccar-f-exam-prep/branches) show the lessons one by one.
+- Setup: `python3 -m venv .venv && .venv/bin/pip install -r requirements.txt`, then put `ANTHROPIC_API_KEY=...` in a `.env` file (gitignored) for the notebooks.
