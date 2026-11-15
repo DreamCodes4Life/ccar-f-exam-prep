@@ -16,7 +16,7 @@ The owner's working repo for the Hubmonium learning path *Claude Certified Archi
 ## Sources
 
 - Certification page, with the exam guide PDF under "Exam Guide": https://anthropic-partners.skilljar.com/claude-certified-architect-foundations-certification
-- Each step's link is in the README table. The Anthropic Academy courses (Skilljar) are videos and interactive lessons Claude can't watch. Work from what the owner shares and from the official docs: platform.claude.com/docs for the API, code.claude.com/docs for Claude Code and the Agent SDK, modelcontextprotocol.io for MCP.
+- Each step's link is in the README table, and each lesson's link is in `learning-path.md`. The Anthropic Academy courses (Skilljar) are videos and interactive lessons Claude can't watch. Work from what the owner shares and from the official docs: platform.claude.com/docs for the API, code.claude.com/docs for Claude Code and the Agent SDK, modelcontextprotocol.io for MCP.
 
 ## Versions
 
@@ -31,6 +31,7 @@ The exam guide is v1.0 (July 2026), and some course notebooks are older than the
 
 - One folder per step, numbered as in the README and the app: `02-building-with-the-claude-api/`, `03-ai-fluency/`, … `16-final-review/`. Create the folder when the step starts, with its code and a `notes.md`. Step 1 (the exam guide) was done and step 2 had started before this repo existed. If the owner wants notes for them, write them from what they share.
 - `15-exercises/`: the exam guide's four preparation exercises (section 8), one subfolder each. The path suggests building each exercise in its own repo, so when step 15 starts, ask the owner whether to use subfolders here or separate repos.
+- `learning-path.md`: every lesson of the path, numbered `step.lesson`, with its link, hours, planned dates and a checkbox (see Progress tracking).
 - `exam/<domain>.md`: one revision sheet per exam domain, kebab-case (e.g. `exam/tool-design-and-mcp-integration.md`). `exam/practice.md`: date, score per domain and weak areas for each set of sample questions.
 - `exam-questions/` (gitignored, local only): any practice questions the owner collects, with answers. Never commit them or quote them in committed files.
 - When a step is done, fill in its row of the README's step table (the folder link).
@@ -62,4 +63,9 @@ Every API call is billed to the owner. Before running anything that sends many r
 
 ## Progress tracking
 
-The owner tracks the path in Hubmonium, where each step is split into lessons of up to 2 h (for example "Tool use — multi-turn tool loops, multiple tools, built-in tools" in the API course), studied in a 90-minute evening block. Claude can't see that tracker. When a lesson is done, say which one they can tick.
+The owner tracks the path in Hubmonium, where each step is split into lessons of up to 2 h, studied in a 90-minute evening block. Hubmonium is the source of truth; `learning-path.md` mirrors it lesson by lesson (2.6 is step 2, lesson 6: "Tool use — multi-turn tool loops, multiple tools, built-in tools").
+
+- When a step starts, work through its lessons in that order, using each lesson's link.
+- When a lesson is done, say which one they can tick in Hubmonium (number and title), tick its box in `learning-path.md` and update the step's status in the overview table.
+- The *Planned* column is the timetable. If they fall well behind it, say so once; re-planning happens in Hubmonium, not here.
+- If the path changes in Hubmonium (lessons added, split or moved, the timetable shifted), update `learning-path.md` to match, and the step table in the README if its hours or lesson counts change.

@@ -57,11 +57,12 @@ About 81.5 hours in 104 lessons of up to 2 hours each, in the path's order. Ever
 | 16 | Final review: sample questions and weak domains | Exam guide | 3 | 5 | |
 | 17 | The exam | Pearson VUE | | | |
 
-The *Folder* column is filled in as each step is done.
+The *Folder* column is filled in as each step is done. Every lesson, with its link, hours, planned dates and whether it's done, is in [learning-path.md](learning-path.md).
 
 ## Layout
 
 ```
+learning-path.md      every lesson of the path, with links and progress
 NN-<step>/            one folder per step, numbered as in the path, added as I go
   notes.md            key ideas tied to the exam domains, gotchas, links
   *.ipynb, *.py       hands-on work, when the step has any
