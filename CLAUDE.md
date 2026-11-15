@@ -50,22 +50,31 @@ Every API call is billed to the owner. Before running anything that sends many r
 
 ## Public repo rules
 
-- Treat this repo as public (it goes on GitHub under `DreamCodes4Life`, like the sibling repos). Never commit API keys or tokens. If a cell prints a secret, clear that output before committing.
+- This repo is public: https://github.com/DreamCodes4Life/ccar-f-exam-prep. Never commit API keys or tokens. If a cell prints a secret, clear that output before committing.
 - Don't copy course material: no slides, videos, quiz or assessment answers, and no sample questions from the exam guide. Summarise ideas in the owner's own words and link to the source.
 - After the exam, record only the result and the domains to improve, never the questions.
 - `.mcp.json` files use `${VAR}` placeholders for credentials, never the values. Personal MCP servers go in user scope, not in the repo.
 
 ## Git
 
-- New work goes on a branch named after the step and lesson, in the owner's style (e.g. `ClaudeAPI_ToolUse`), not on `main`.
+Every lesson (or module, when the work spans a whole step) is published on its own branch and then merged into `main`. Never commit straight to `main`.
+
+1. Start the branch from an up-to-date `main`, named after the step and lesson in the owner's style: `ClaudeAPI_ToolUse`, `Setup_Jupyter`, `LearningPath_Tracker`.
+2. Commit on it after each meaningful step, with a short message that says what was learned or built.
+3. When the lesson is done, push the branch (`git push -u origin <branch>`), merge it into `main` with `git merge --no-ff <branch>` and a message like `Merge ClaudeAPI_ToolUse: <what the lesson added>`, then push `main`.
+4. Keep the merged branches, locally and on GitHub. The branch list doubles as a log of the lessons.
+
+Other rules:
+
 - The repo has a local commit identity with the GitHub noreply address, so the owner's email stays out of public history. Don't override it.
-- Commit after each meaningful step with a short message that says what was learned or built. Merge or push only when the owner asks; the GitHub account is `DreamCodes4Life`.
+- Pushes go through `gh` as `DreamCodes4Life`. More than one GitHub account may be logged in, so check with `gh auth status` that `DreamCodes4Life` is the active one before pushing.
+- Outside this lesson routine (rewriting history, deleting branches, force-pushing), ask the owner first.
 
 ## Progress tracking
 
 The owner tracks the path in Hubmonium, where each step is split into lessons of up to 2 h, studied in a 90-minute evening block. Hubmonium is the source of truth; `learning-path.md` mirrors it lesson by lesson (2.6 is step 2, lesson 6: "Tool use — multi-turn tool loops, multiple tools, built-in tools").
 
 - When a step starts, work through its lessons in that order, using each lesson's link.
-- When a lesson is done, say which one they can tick in Hubmonium (number and title), tick its box in `learning-path.md` and update the step's status in the overview table.
+- When a lesson is done, say which one they can tick in Hubmonium (number and title), tick its box in `learning-path.md` and update the step's status in the overview table. Then publish the lesson's branch and merge it into `main` (see Git).
 - The *Planned* column is the timetable. If they fall well behind it, say so once; re-planning happens in Hubmonium, not here.
 - If the path changes in Hubmonium (lessons added, split or moved, the timetable shifted), update `learning-path.md` to match, and the step table in the README if its hours or lesson counts change.
