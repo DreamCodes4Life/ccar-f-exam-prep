@@ -1,0 +1,32 @@
+# Python virtual environment (a symlink to ~/.venvs/ccar-f-exam-prep)
+.venv
+.venv/
+
+# Secrets: keep keys out of a public repo. Anthropic's notebooks read ANTHROPIC_API_KEY from .env
+.env
+.env.*
+*.env
+.secrets*
+anthropic_api_key*
+
+# Claude Code personal settings (the shared ones in .claude/ are committed)
+.claude/settings.local.json
+
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Node (Agent SDK demos, MCP servers in TypeScript)
+node_modules/
+dist/
+
+# Large outputs and downloaded data (rebuild them instead)
+outputs/
+data/
+
+# Practice questions with answers: keep them local only
+exam-questions/
+exam-questions*.md
+exam-questions*.json
