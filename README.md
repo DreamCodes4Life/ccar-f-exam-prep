@@ -40,7 +40,7 @@ About 81.5 hours in 104 lessons of up to 2 hours each, in the path's order. Ever
 | # | Step | Provider | Hours | Lessons | Folder |
 |---:|---|---|---:|---:|---|
 | 1 | [Claude Certified Architect – Foundations: Exam Guide](https://anthropic-partners.skilljar.com/claude-certified-architect-foundations-certification) | Anthropic | 1.5 | 1 | |
-| 2 | [Building with the Claude API](https://anthropic.skilljar.com/claude-with-the-anthropic-api) | Anthropic Academy | 10 | 12 | |
+| 2 | [Building with the Claude API](https://anthropic.skilljar.com/claude-with-the-anthropic-api) | Anthropic Academy | 10 | 12 | [02-building-with-the-claude-api](02-building-with-the-claude-api/) |
 | 3 | [AI Fluency: Framework & Foundations](https://anthropic.skilljar.com/ai-fluency-framework-foundations) | Anthropic Academy | 4 | 6 | |
 | 4 | [Claude 101](https://anthropic.skilljar.com/claude-101) | Anthropic Academy | 2.5 | 4 | |
 | 5 | [Prompt Engineering Interactive Tutorial](https://github.com/anthropics/prompt-eng-interactive-tutorial) | Anthropic | 3 | 5 | |
