@@ -24,10 +24,11 @@ Every lesson has a notebook here, run on `claude-sonnet-5-5` with its outputs sa
 - Python 3.12 virtual environment, packages in [`../requirements.txt`](../requirements.txt): `anthropic`, `python-dotenv`, `mcp`, `fastembed`, `matplotlib`, `notebook`, `ipykernel`. In VS Code: the Python and Jupyter extensions, then *Select Kernel* → `.venv`.
 - API key: [Claude Console](https://platform.claude.com) → Keys → Create key. The Console now first asks where the code runs; "Somewhere else" gives an API key (on your own machine you can also sign in with the `ant` CLI and skip the key). The key goes in `.env` at the repo root (`ANTHROPIC_API_KEY=...`), which is gitignored; `load_dotenv()` + `Anthropic()` pick it up.
 - Cost of running all eleven notebooks once: about 110 requests on Sonnet 5.5, roughly $1.50.
+- Practice: notebooks 2.1 and 2.2 have exercises (four and three), each with a task, a *Your turn* cell, a hint, a solution and a *Check* cell that prints ✅ when it works. Write your own code, run it, then run the check.
 
 ## Key ideas, lesson by lesson
 
-**2.1** One endpoint, `messages.create`, with `model`, `max_tokens` and `messages`. The answer is a list of content blocks; read the `text` ones and check `stop_reason` and `usage`. The API is stateless: your code keeps the conversation and resends all of it each turn. The system prompt sets role and rules, but it is guidance: rules that must always hold go in code.
+**2.1** Claude is a family of models: Haiku 5.5 (fast, cheap), Sonnet 5.5 (the everyday balance), Opus 5.5 (long, complex work), Fable 5.2 (most capable); start with the smallest that passes your evals. One endpoint, `messages.create`, with `model`, `max_tokens` and `messages`. The answer is a list of content blocks; read the `text` ones and check `stop_reason` and `usage`. The API is stateless: your code keeps the conversation and resends all of it each turn. The system prompt sets role and rules, but it is guidance: rules that must always hold go in code. `max_tokens` cuts an answer off silently: only `stop_reason == "max_tokens"` tells you. Without `temperature`, ask for variety in the prompt (several options in one call).
 
 **2.2** Streaming sends the answer as events while it's written (out of exam scope). For data a program reads, use structured outputs (`output_config.format` with a JSON schema, or `client.messages.parse()` with a Pydantic model). A schema guarantees shape, not truth: check business rules in code, and make fields nullable when the information may be missing.
 
